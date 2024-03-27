@@ -1,0 +1,230 @@
+@font-face{
+    font-family: "NewYork Heavy";
+    src: url(assets/AppleFonts/New\ York\ -\ Heavy.otf);
+}
+@font-face{
+    font-family: "NewYork Semibold";
+    src: url(assets/AppleFonts/New\ York\ -\ Semibold.otf);
+}
+@font-face{
+    font-family: "Semibold";
+    src: url(assets/AppleFonts/SF\ Pro\ -\ Semibold.otf);
+}
+@font-face{
+    font-family: "Semibold Rails";
+    src: url(assets/AppleFonts/SF\ Pro\ -\ Semibold\ Rails.otf);
+}
+@font-face{
+    font-family: "Semibold Rounded";
+    src: url(assets/AppleFonts/SF\ Pro\ -\ Semibold\ Rounded.otf);
+}
+@font-face{
+    font-family: "Semibold Soft";
+    src: url(assets/AppleFonts/SF\ Pro\ -\ Semibold\ Soft.otf);
+}
+@font-face{
+    font-family: "Semibold Stencil";
+    src: url(assets/AppleFonts/SF\ Pro\ -\ Semibold\ Stencil.otf);
+}
+
+a:link {color: #06c}
+a:visited {color: #06c}
+a:hover {color: #06c}
+a:active {color: #06c}
+
+:root{
+    --paynes-gray: #495867ff;
+    --glaucous: rgb(124, 161, 212);
+    --columbia-blue: #bdd5eaff;
+    --ghost-white: #f7f7ffff;
+    --bittersweet: #fe5f55ff;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+
+    overflow: hidden scroll;
+
+    user-select: none;
+}
+
+.header{
+    position: fixed;    
+
+    height: 4.5vh;
+    width: 100vw;
+
+    margin-top: -7.5vh;
+
+    background-color: rgba(22, 22, 23, .8);
+    backdrop-filter: blur(25px);
+
+    fill: white;
+
+    z-index: 1000;
+}
+
+.content-container{
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 7.5vh;
+}
+
+.content{
+    width: 100%;
+    height: fit-content;
+}
+
+.item-banner{
+    background-color: black;
+
+    width: 100%;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.item-banner img{
+    width: 100%;
+    margin-left: -10%;
+
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.item-banner .item-banner-details-container{
+    margin: 25% 0 0 -10%;
+
+    width: 80%;
+    height: 40%;
+
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    align-content: center;
+}
+
+.item-banner-details-container .item-details-content{
+    display: grid;
+
+    align-content: center;
+    text-align: center;
+
+    word-spacing: .1em;
+
+    color: white;
+
+    font-family: "Semibold";
+}
+
+.item-banner-details-container .item-shortcuts{
+    width: 50%;
+
+    margin-left: 25%;
+    align-self: center;
+
+    font-size: 25px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.content .refurbished-items-container{
+    width: 100%;
+    height: 100vh;
+
+    background-color: white;
+
+    overflow: hidden;
+}
+
+.refurbished-items-container .title{
+    color: black;
+
+    font-family: 'Semibold';
+    font-size: 50px;
+    
+    text-align: center;
+
+    margin-top: 7.5vh;
+}
+
+.refurbished-items-container .view-more{
+    width: 100%;
+    height: fit-content;
+
+    display: grid;
+    align-content: center;
+
+    margin-top: 5vh;
+
+    text-align: center;
+
+    font-family: "Semibold";
+    font-size: 20px;
+}
+
+.refurbished-items-container .item-cards-container{
+    width: 95%;
+
+    margin: 7.5vh 0 0 2.5%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-cards-container .item-card{
+    width: 22%;
+    aspect-ratio: 2/3;
+
+    border-radius: 4.5%/3%;
+    
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+    display: grid;
+    grid-template-rows: 4fr 2fr;
+}
+
+.item-cards-container .item-card .card-item-image{
+    overflow: hidden;
+}
+
+.item-cards-container .item-card .card-item-image img{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.item-cards-container .item-card .card-item-info{
+    width: 90%;
+
+    margin-left: 5%;
+
+    overflow: hidden;
+
+    font-family: 'Semibold';
+    text-align: center;
+
+}
+
+.item-cards-container .item-card .card-item-info .title{
+    font-size: 25px;
+    
+    margin-top: 10%;
+    line-height: 1.25em;
+}
+
+.item-cards-container .item-card .card-item-info .price{
+    font-size: 20px;
+    margin-top: 5%;
+    color: rgba(182, 68, 0,.75);
+}
+
+.item-cards-container .item-card .card-item-info .price-saving :first-child{
+    color: rgba(0,0,0,.75);
+    text-decoration: line-through;
+}
